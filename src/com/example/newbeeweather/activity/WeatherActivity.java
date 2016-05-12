@@ -1,5 +1,7 @@
 package com.example.newbeeweather.activity;
 
+import com.example.newbeeweather.receiver.AutoUpdateReceiver;
+import com.example.newbeeweather.service.AutoUpdateService;
 import com.example.newbeeweather.util.HttpCallbackListener;
 import com.example.newbeeweather.util.HttpUtil;
 import com.example.newbeeweather.util.Utility;
@@ -157,6 +159,9 @@ public class WeatherActivity extends Activity implements OnClickListener{
 		
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);		
+		
+		Intent intent = new Intent(this,AutoUpdateService.class);
+		startService(intent);
 	}
 
 	@Override
