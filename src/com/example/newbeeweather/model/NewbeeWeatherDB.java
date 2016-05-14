@@ -11,6 +11,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/*
+ * 封装数据库操作，以便之后使用
+ */
 public class NewbeeWeatherDB {
 	
 	/*
